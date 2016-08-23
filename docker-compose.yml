@@ -3,7 +3,7 @@ version: '2'
 services:
   myapp:
     tty: true # Enables debugging capabilities when attached to this container.
-    image: bitnami/swift
+    image: bitnami/swift:3.0-PREVIEW-6-r0
     ports:
       - '80:80'
     volumes:
