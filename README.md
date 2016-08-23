@@ -128,16 +128,23 @@ $ docker-compose run myapp swift --version
 
 You get the idea..
 
+You can create your swift project:
+
+```bash
+$ docker-compose run myapp mkdir yourapp
+$ docker-compose run myapp swift package init --type executable -C yourapp
+```
+
 Then you can develop your swift code and when your app is ready to be build you can execute:
 
 ```bash
-$ docker-compose run myapp swift build
+$ docker-compose run myapp swift build -C yourapp
 ```
 
 Finally you can execute your app:
 
 ```bash
-$ docker-compose run myapp .build/debug/yourapp
+$ docker-compose run myapp yourapp/.build/debug/yourapp
 ```
 
 Thats it!
