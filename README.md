@@ -10,7 +10,7 @@ In this tutorial we walk you through using the Bitnami docker images during the 
 
 You can download this repository locally to your computer to start working with the tutorial or just click the link below to automatically create and launch a Swift on-demand Eclipse Che developer workspace on Codenvy:
 
-[![Contribute](http://beta.codenvy.com/factory/resources/codenvy-contribute.svg)](https://beta.codenvy.com/f/?url=https%3A%2F%2Fgithub.com%2Fbitnami%2Fbitnami-docker-swift%2Ftree%2Fche-3.0-PREVIEW-6-r0)
+[![Contribute](http://beta.codenvy.com/factory/resources/codenvy-contribute.svg)](https://beta.codenvy.com/f/?url=https%3A%2F%2Fgithub.com%2Fbitnami%2Fbitnami-docker-swift%2Ftree%2Fche-3.0-PREVIEW-6-r1)
 
 You can find the configuation files used on the previous link in the [Che branch](https://github.com/bitnami/bitnami-docker-swift/tree/che). For more information about Eclipse Che workspaces check  the [official documentation](https://eclipse-che.readme.io/docs/introduction)
 
@@ -55,14 +55,14 @@ Further, we also assume that your application will be using a database. In fact,
 We assume that you're starting the development of the [Swift](https://swift.org/) application from scratch. So lets begin by creating a directory for the application source where we'll be bootstrapping a Swift application:
 
 ```bash
-$ mkdir ~/workdir/my-app
-$ cd ~/workdir/my-app
+$ mkdir ~/workdir/
+$ cd ~/workdir/
 ```
 
 Next, download our Docker Compose orchestration file for Swift development:
 
 ```bash
-$ curl -L "https://raw.githubusercontent.com/juan131/bitnami-docker-swift/master/docker-compose.yml" > docker-compose.yml
+$ curl -L "https://raw.githubusercontent.com/bitnami/bitnami-docker-swift/master/docker-compose.yml" > docker-compose.yml
 ```
 
 > We encourage you to take a look at the contents of the orchestration file to get an idea of the services that will be started for Swift development.
@@ -79,7 +79,7 @@ This command reads the contents of the orchestration file and begins downloading
 
 After the images have been downloaded, each of the services listed in the orchestration file is started, which in this case is `myapp`.
 
-The service starts `myapp` and uses the Bitnami Swift development image. The service mounts the current working directory (`~/workdir/myapp`) at the `/app` location in the container and provides all the necessary infrastucture to get you started developing a data-driven Swift application.
+The service starts `myapp` and uses the Bitnami Swift development image. The service mounts the current working directory (`~/workdir/`) at the `/app` location in the container and provides all the necessary infrastucture to get you started developing a data-driven Swift application under the directory `~/workdir/my-app/`.
 
 This Docker Image assumes that in case you decide to deploy a web application written in Swift, the web server will be listening in the port `80`. If you want to use any other port, you will need to modify both the Dockerfile and the docker-compose.yml files as described below:
 
@@ -93,14 +93,14 @@ docker-compose.yml:
 ~~80:80~~
 NEWPORT:NEWPORT
 
-Lets inspect the contents of the `~/workdir/myapp` directory:
+Lets inspect the contents of the `~/workdir/my-app/` directory:
 
 ```bash
-~/workdir/myapp # ls
-LICENSE  Packages  Package.swift  README.md  Sources
+~/workdir/my-app/ # ls
+Package.swift  Sources  Tests
 ```
 
-You can see that we have a new Swift application bootstrapped in the `~/workdir/myapp` directory of the host.
+You can see that we have a new Swift application bootstrapped in the `~/workdir/my-app/` directory of the host.
 
 Since the application source resides on the host, you can use your favourite IDE for developing the application. Only the execution of the application occurs inside the isolated container environment.
 

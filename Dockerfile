@@ -5,11 +5,6 @@
 ## RUNNING
 ##   $ docker run -p 80:80 bitnami-bitnami-docker-swift
 ##
-## CONNECTING
-##   Lookup the IP of your active docker host using:
-##     $ docker-machine ip $(docker-machine active)
-##   Connect to the container at DOCKER_IP:80
-##     replacing DOCKER_IP for the IP of your active docker host
 
 FROM gcr.io/stacksmith-images/ubuntu-buildpack:14.04-r8
 
@@ -31,11 +26,9 @@ ENV PATH=/opt/bitnami/swift/bin:$PATH
 
 RUN chown -R bitnami:bitnami /opt/bitnami/swift
 
-## STACKSMITH-END: Modifications below this line will be unchanged when regenerating
-
 # Swift template
 ENV BITNAMI_APP_NAME=swift \
-    BITNAMI_IMAGE_VERSION=3.0-PREVIEW-6
+    BITNAMI_IMAGE_VERSION=3.0-PREVIEW-6-r1
 
 COPY rootfs/ /
 

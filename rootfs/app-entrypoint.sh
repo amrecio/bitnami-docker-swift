@@ -1,11 +1,9 @@
 #!/bin/bash
 set -e
 
-source /opt/bitnami/stacksmith-utils.sh
-print_welcome_page
-
 #set app name to ENV or default
 SWIFT_APP="my-app"
+COMMAND="$@"
 
 if [ "$APP_NAME" != "" ]; then
     SWIFT_APP=$APP_NAME
@@ -34,6 +32,7 @@ if [ "$1" == "swift" -a "$2" == "app" -a "$3" == "start" ]; then
         cd $PROJECT_DIRECTORY
         swift build
     fi
+    COMMAND=$PROJECT_DIRECTORY/.build/debug/$SWIFT_APP
 fi
 
-exec $PROJECT_DIRECTORY/.build/debug/$SWIFT_APP
+exec /entrypoint.sh $COMMAND
