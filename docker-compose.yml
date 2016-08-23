@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  myapp:
+    tty: true # Enables debugging capabilities when attached to this container.
+    image: bitnami/swift
+    ports:
+      - '80:80'
+    volumes:
+      - .:/app
