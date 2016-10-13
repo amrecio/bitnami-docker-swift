@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/bitnami/bitnami-docker-swift/tree/master.svg?style=shield)](https://circleci.com/gh/bitnami/bitnami-docker-swift/tree/master)
 [![Docker Hub Automated Build](http://container.checkforupdates.com/badges/bitnami/swift)](https://hub.docker.com/r/bitnami/swift/)
 # Swift Application Development using Bitnami Docker Images
 
