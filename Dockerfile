@@ -6,7 +6,7 @@
 ##   $ docker run -p 80:80 bitnami-bitnami-docker-swift
 ##
 
-FROM gcr.io/stacksmith-images/ubuntu-buildpack:14.04-r10
+FROM gcr.io/stacksmith-images/minideb-buildpack:jessie-r2
 
 MAINTAINER Bitnami <containers@bitnami.com>
 
@@ -28,7 +28,7 @@ RUN chown -R bitnami:bitnami /opt/bitnami/swift
 
 # Swift template
 ENV BITNAMI_APP_NAME=swift \
-    BITNAMI_IMAGE_VERSION=3.0-RELEASE-r1
+    BITNAMI_IMAGE_VERSION=3.0-RELEASE-r2
 
 COPY rootfs/ /
 
