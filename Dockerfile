@@ -6,7 +6,7 @@
 ##   $ docker run -p 80:80 bitnami-bitnami-docker-swift
 ##
 
-FROM gcr.io/stacksmith-images/minideb-buildpack:jessie-r4
+FROM gcr.io/stacksmith-images/minideb-buildpack:jessie-r5
 
 MAINTAINER Bitnami <containers@bitnami.com>
 
