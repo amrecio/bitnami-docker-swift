@@ -23,7 +23,7 @@ You can find the configuration files used on the previous link in the [Che branc
 
 ## Introduction
 
-[Swift](https://www.swift.com/) is a powerful PHP framework with a very small footprint, built for developers who need a simple and elegant toolkit to create full-featured web applications.
+[Swift](https://www.swift.org/) is a general-purpose programming language built using a modern approach to safety, performance, and software design patterns.
 
 The Bitnami Swift Development Container has been carefully engineered to provide you and your team with a highly reproducible Swift development environment. We hope you find the Bitnami Swift Development Container useful in your quest for world domination. Happy hacking!
 
@@ -120,29 +120,3 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
