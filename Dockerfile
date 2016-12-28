@@ -22,7 +22,7 @@ RUN chown -R bitnami:bitnami /opt/bitnami/swift
 
 # Swift template
 ENV BITNAMI_APP_NAME=swift \
-    BITNAMI_IMAGE_VERSION=3.0.2-RELEASE-r0
+    BITNAMI_IMAGE_VERSION=3.0.2-RELEASE-r1
 
 COPY rootfs/ /
 
