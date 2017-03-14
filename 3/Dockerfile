@@ -3,7 +3,7 @@ FROM gcr.io/stacksmith-images/minideb-buildpack:jessie-r10
 MAINTAINER Bitnami <containers@bitnami.com>
 
 ENV BITNAMI_APP_NAME=swift \
-    BITNAMI_IMAGE_VERSION=3.0.2-RELEASE-r2 \
+    BITNAMI_IMAGE_VERSION=3.0.2-RELEASE-r3 \
     PATH=/opt/bitnami/swift/bin:$PATH
 
 # System packages required
