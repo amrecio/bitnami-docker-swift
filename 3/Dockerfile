@@ -1,9 +1,9 @@
-FROM bitnami/minideb-extras:jessie-r13-buildpack
+FROM bitnami/minideb-extras:jessie-r19-buildpack
 
 MAINTAINER Bitnami <containers@bitnami.com>
 
 ENV BITNAMI_APP_NAME=swift \
-    BITNAMI_IMAGE_VERSION=3.1.1 \
+    BITNAMI_IMAGE_VERSION=3.1.1-r2 \
     PATH=/opt/bitnami/swift/bin:/opt/bitnami/python/bin:$PATH
 
 # System packages required
